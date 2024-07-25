@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:platformImageResizeIssue="clr-namespace:PlatformImageResizeIssue"
+             x:Class="PlatformImageResizeIssue.MainPage">
+    <ContentPage.Resources>
+        <platformImageResizeIssue:ResizeImageDrawable x:Key="resizeImageDrawable" />
+        <platformImageResizeIssue:DownsizeImageDrawable x:Key="downsizeImageDrawable" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Resize image" />
+            <GraphicsView Drawable="{StaticResource resizeImageDrawable}"
+                          HeightRequest="300"
+                          WidthRequest="400" />
+            <Label Text="Downsize image" />
+            <GraphicsView Drawable="{StaticResource downsizeImageDrawable}"
+                          HeightRequest="300"
+                          WidthRequest="400" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
